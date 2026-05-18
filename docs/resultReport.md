@@ -38,3 +38,26 @@
 ---
 - ✔️ OK - Query **[ 11 ]**
 
+---
+- ✔️ OK - Query **[ 12 ]**
+
+---
+- ✔️ OK - Query **[ 13 ]**
+
+---
+- ❌ MISMATCH - Query **[ 14 ]** Result does not match expected output.
+
+
+🧩 Mismatch at position 0:
+- **Expected:** {"borough":"Brooklyn","cuisine":"Delicatessen","name":"Wilken'S Fine Food","restaurant_id":40356483}
+- **Actual:** {"address":{},"borough":"Brooklyn","cuisine":"Delicatessen","grades":[{},{},{},{},{},{}],"location":{},"name":"Wilken'S Fine Food","restaurant_id":40356483}
+
+---
+- ✔️ OK - Query **[ 15 ]**
+
+---
+- ✔️ OK - Query **[ 16 ]**
+
+---
+- ✔️ OK - Query **[ 17 ]**
+
