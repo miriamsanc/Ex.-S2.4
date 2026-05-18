@@ -23,7 +23,7 @@ db.restaurants.find({borough: "Bronx"},{_id: 0}).skip(5).limit(5)
 db.restaurants.find({"grades.score":{ $gte: 90 } },{_id: 0})
 
 // 9. Trobar els restaurants amb un score de més de 80 però menys que 100.
-db.restaurants.find({"grades.score":{ $gte: 80, $lte: 100 } },{_id: 0})
+db.restaurants.find({"grades.score":{ $lte: 100, $gte: 80 } },{_id: 0})
 
 // 10. Trobar els restaurants amb longitud menor que -95.754168.
 db.restaurants.find({"location.coordinates.0":{ $lte: -95.754168 }},{_id: 0})
@@ -38,7 +38,7 @@ db.restaurants.find({cuisine: { $ne: "American" }, "grades.score":{ $gte: 70 }, 
 db.restaurants.find({ cuisine: { $ne: "American" },"grades.grade": "A", borough: { $ne: "Brooklyn" }},{ _id: 0 }).sort({ cuisine: -1 })
 
 // 14. Trobar restaurant_id, name, borough i cuisine on el nom comença amb 'Wil'.
-db.restaurants.find({name: {$regex: "^Wil", $options: "i"}} ,{_id: 0})
+db.restaurants.find({name: {$regex: "^Wil", $options: "i"}} ,{_id: 0, restaurant_id: 1, name: 1, borough: 1, cuisine: 1})
 
 // 15. Trobar restaurant_id, name, borough i cuisine on el nom acaba en 'ces'.
 db.restaurants.find( {name: { $regex: "ces$", $options: "i" } }, {_id: 0, restaurant_id: 1, name: 1, borough: 1, cuisine: 1 })
